@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Banner</title>
+    <style>
+        .card {
+            width: 300px;
+            height: 450px;
+            background-color: #B55D4C;
+            border-radius: 30px;
+            box-shadow: 3px 3px 4px black;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner {
+            background: url(/images/cat-5414737_1280.jpg) no-repeat;
+            background-size: cover;
+            height: 150px;
+        }
+
+        .content {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+        }
+
+        .photo {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .photo img {
+            width: 100%;
+        }
+
+        hr {
+            margin: 0 30px;
+            color: white;
+        }
+
+        .name {
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+        }
+
+        .button {
+            width: 170px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            background: linear-gradient(#fffcdc, #F16529);
+            border-radius: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        p {
+            color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="banner"></div>
+        <div class="content">
+            <figure class="photo">
+                <img src="./images/ex1_pic1.jpg" alt="">
+            </figure>
+            <p class="name">Jean</p>
+            <hr>
+            <p class="intro">Hello, nice to meet you.</p>
+            <a role="button" class="button">Follow Me</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

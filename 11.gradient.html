@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .grad1 {
+            background: linear-gradient(to right, #a8ff78, #78ffd6);
+        }
+
+        .grad2 {
+            background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d 70%);
+        }
+
+        .grad3 {
+            background: linear-gradient(to right, #d9a7c7, #fffcdc);
+        }
+
+        .grad4 {
+            background: linear-gradient(217deg, #d9a7c7, #fffcdc 70.71%),
+                linear-gradient(127deg, #ff9966, #ff5e62 70.71%),
+                linear-gradient(127deg, #3a1c71, #d76d77, #ffaf7b 70.71%);
+            width: 100px;
+            height: 100px;
+        }
+
+        .grad5 {
+            background: linear-gradient(#ff5e61bb 50%, #fffcdc4d 50%), linear-gradient(to right, #ff5e62 50%, #fffcdc 50%);
+            background-size: 20px 20px;
+            /* multiple bg原理：前蓋後，直接拉rgba透明度 */
+        }
+
+        .grad6 {
+            background: repeating-linear-gradient(coral, red 25%);
+        }
+
+        .grad7 {
+            background: radial-gradient(purple, yellow 25%, red 100%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .grad8 {
+            background: radial-gradient(circle, purple, yellow 25%, red 100%);
+        }
+
+        .grad9 {
+            background: repeating-radial-gradient(circle, purple, yellow 8%, orange 16%, red 25%);
+        }
+
+        p {
+            font-size: 50px;
+            background: linear-gradient(to right, #c6ffdd 8%, #fbd786 10%, #f7797d 20%);
+            font-weight: bold;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box grad1"></div>
+    <div class="box grad2"></div>
+    <div class="box grad3"></div>
+    <div class="box grad4"></div>
+    <div class="box grad5"></div>
+    <div class="box grad6"></div>
+    <div class="box grad7"></div>
+    <div class="box grad8"></div>
+    <div class="box grad9"></div>
+
+    <p>Background Clip</p>
+</body>
+
+</html>

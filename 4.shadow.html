@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 60px red inset, 0 0 120px orange inset, 0 0 180px pink inset;
+        }
+
+        .box1 {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+            box-shadow: 30px 35px 0 10px #000, 60px 0 0 0 #000;
+            /*x軸 y軸 模糊程度 擴散距離*/
+        }
+
+        p {
+            text-shadow: 2px 3px 5px gray;
+            /*水瓶偏移 垂直偏移 模糊程度 顏色*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <hr>
+
+    <div class="box1"></div>
+
+    <hr>
+
+    <p>Shadow</p>
+</body>
+
+</html>

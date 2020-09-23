@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+    <style>
+        body {
+            position: relative;
+            margin: 10px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .background {
+            height: 500px;
+            background: url(/images/paris.jpg) center center no-repeat;
+            background-size: cover;
+            position: relative;
+            top: 0;
+        }
+
+        h1 {
+            width: 100%;
+            position: absolute;
+            margin: 0;
+            /* top: 0;  top0和bottom0會以top為主*/
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            /*left 0會在最左邊所以text align*/
+            color: #000000;
+            opacity: 0;
+        }
+
+        .container:hover .background {
+            opacity: .5;
+        }
+
+        .container:hover h1 {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background"></div>
+        <h1>Paris</h1>
+    </div>
+</body>
+
+</html>

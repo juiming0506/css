@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text overflow</title>
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+        }
+
+        .box {
+            margin: 10px;
+            background-color: #afa;
+            /* text-overflow: ellipsis; */
+            overflow: hidden;
+            /* white-space: nowrap; */
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, unde dolorum illum obcaecati iusto iure
+            culpa placeat reprehenderit aspernatur, sint sunt, cupiditate beatae a incidunt animi minus ad ducimus
+            dicta.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, unde dolorum illum obcaecati iusto iure
+            culpa placeat reprehenderit aspernatur, sint sunt, cupiditate beatae a incidunt animi minus ad ducimus
+            dicta.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, unde dolorum illum obcaecati iusto iure
+            culpa placeat reprehenderit aspernatur, sint sunt, cupiditate beatae a incidunt animi minus ad ducimus
+            dicta.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, unde dolorum illum obcaecati iusto iure
+            culpa placeat reprehenderit aspernatur, sint sunt, cupiditate beatae a incidunt animi minus ad ducimus
+            dicta.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, unde dolorum illum obcaecati iusto iure
+            culpa placeat reprehenderit aspernatur, sint sunt, cupiditate beatae a incidunt animi minus ad ducimus
+            dicta.
+        </div>
+    </div>
+</body>
+
+</html>
