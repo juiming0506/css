@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify content</title>
+    <style>
+        .wrap {
+            display: flex;
+            /* 下在外面的父層 */
+            flex-direction: row;
+            background-color: #ccc;
+            padding: 10px;
+        }
+
+        .flex1 {
+            justify-content: space-between;
+            /* 物體間隔空間平均，三個box兩個間隔 */
+        }
+
+        .flex2 {
+            justify-content: space-around;
+            /* 物體左右空間平均 */
+        }
+
+        .flex3 {
+            justify-content: space-evenly;
+            /* 物體間隔空間平均，三個box四個間隔 */
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>justify-content: space-between;</p>
+    <div class="wrap flex1">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+    </div>
+    <p>justify-content: space-around;</p>
+    <div class="wrap flex2">
+        <div class="box autobg">box4</div>
+        <div class="box autobg">box5</div>
+        <div class="box autobg">box6</div>
+    </div>
+    <p>justify-content: space-evenly;</p>
+    <div class="wrap flex3">
+        <div class="box autobg">box7</div>
+        <div class="box autobg">box8</div>
+        <div class="box autobg">box9</div>
+    </div>
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+        }
+
+        function getRBGA() {
+            return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+        }
+
+        const elements = document.querySelectorAll('.autobg');
+
+        Array.from(elements).forEach((element, index) => {
+            element.style.backgroundImage = getRBGA();
+        });
+
+    // $('.autobg').each(function (index, currentElement) {
+    //     currentElement.style.backgroundImage = getRBGA();
+    // });
+    </script>
+</body>
+
+</html>

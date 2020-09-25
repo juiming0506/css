@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter-spacing</title>
+    <style>
+        .container {
+            width: 500px;
+            background-color: rgb(231, 178, 178);
+            padding: 10px;
+        }
+
+        p {
+            letter-spacing: 1.5rem;
+            /* letter spacing為對後面的字元留距離，使用者看起來會偏左 */
+            text-align: center;
+            background-color: rgb(255, 221, 170);
+            text-indent: 1.5rem;
+            /* 可以用text-indent縮排解決 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Lorem, ipsum.</p>
+    </div>
+</body>
+
+</html>

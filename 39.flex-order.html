@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex order</title>
+    <style>
+        .wrap {
+            width: 800px;
+            height: 800px;
+            background-color: #cccccc;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* 決定東西超出時是否換行 */
+            align-items: flex-start;
+            align-content: flex-start;
+            /* 預設為stretch，會有空隙 */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box7 {
+            order: -1;
+            /* 由小到大排列 */
+        }
+
+        .box12 {
+            order: -2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="box autobg">box1</div>
+        <div class="box autobg">box2</div>
+        <div class="box autobg">box3</div>
+        <div class="box autobg">box4</div>
+        <div class="box autobg">box5</div>
+        <div class="box autobg">box6</div>
+        <div class="box autobg box7">box7</div>
+        <div class="box autobg">box8</div>
+        <div class="box autobg">box9</div>
+        <div class="box autobg">box10</div>
+        <div class="box autobg">box11</div>
+        <div class="box autobg box12">box12</div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max - 50) + 100);
+        }
+
+        function getRBGA() {
+            return `linear-gradient(135deg, rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.5), rgba(${getRandomInt(256)},${getRandomInt(256)},${getRandomInt(256)},.8)`
+        }
+
+        const elements = document.querySelectorAll('.autobg');
+
+        Array.from(elements).forEach((element, index) => {
+            element.style.backgroundImage = getRBGA();
+        });
+
+    // $('.autobg').each(function (index, currentElement) {
+    //     currentElement.style.backgroundImage = getRBGA();
+    // });
+    </script>
+</body>
+
+</html>

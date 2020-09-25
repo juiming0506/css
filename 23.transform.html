@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform </title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ffaaaa;
+            float: left;
+            margin: 20px;
+            transition: .5s;
+            position: relative;
+        }
+
+        .translateX:hover {
+            background-color: rgb(255, 221, 170);
+            transform: translateX(40px);
+        }
+
+        .translateY:hover {
+            transform: translateY(40px);
+        }
+
+        .rotate:hover {
+            background-color: rgb(255, 221, 170);
+            transform: rotate(180deg);
+        }
+
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        .skewX:hover {
+            background-color: rgb(255, 221, 170);
+            transform: skewX(30deg);
+        }
+
+        .skewY:hover {
+            transform: skewY(60deg);
+        }
+
+        .skewXY:hover {
+            background-color: rgb(255, 221, 170);
+            transform: skew(30deg, 40deg);
+        }
+
+        .box2 {
+            width: 50px;
+            height: 50px;
+            background-color: #ffa;
+            /* transform: translate(50%, 50%); */
+            position: absolute;
+            /* top: calc(50% - 25px);
+            left: calc(50% - 25px); */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* 因為top和left會包含box本身的大小，所以用 */
+        }
+
+        .combo:hover {
+            transform: translate(100px, 100px) rotate(45deg);
+        }
+
+        .combo2:hover {
+            transform: rotate(45deg) translate(100px, 100px);
+        }
+
+        .matrix-translate:hover {
+            transform: matrix(1, 0, 0, 1, 100, 0);
+        }
+
+        .rotate-origin {
+            transform-origin: 0px 0px;
+            /* 以這裡為中心點 */
+        }
+
+        .wrap:hover .rotate-origin {
+            transform: rotate(360deg) translate(100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box translateX">translateX</div>
+    <div class="box translateY">translateY</div>
+    <div class="box rotate">roatate</div>
+    <div class="box scale">scale</div>
+    <div class="box skewX">skewX</div>
+    <div class="box skewY">skewY</div>
+    <div class="box skewXY">skewXY</div>
+    <div class="box">
+        <div class="box2">
+            置中
+        </div>
+    </div>
+
+    <div class="box combo">綜合運用</div>
+    <div class="box combo2">綜合運用2</div>
+
+    <div class="box matrix-translate">matrix-translate</div>
+    <div class="wrap">
+        <div class="box rotate-origin">r+o</div>
+    </div>
+</body>
+
+</html>

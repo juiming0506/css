@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid area</title>
+    <style>
+        .container {
+            max-width: 800px;
+            height: 430px;
+            display: grid;
+            grid-template-columns: 240px auto;
+            grid-template-rows: 100px 200px 1fr;
+            gap: 5px 5px;
+            grid-template-areas:
+                "header header"
+                "menu content"
+                "footer footer";
+            /* 直接用grid下去做header跟footer會被切兩半 */
+        }
+
+        .item {
+            background-color: #ccc;
+        }
+
+        .header {
+            grid-area: header;
+            /* 命名area */
+            background-color: #aff;
+
+        }
+
+        .menu {
+            grid-area: menu;
+            background-color: #aaffaa;
+            min-height: 200px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #ffaaaa;
+
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item header">header</div>
+        <div class="item menu">menu</div>
+        <item class="item content">content</item>
+        <div class="item footer">footer</div>
+    </div>
+</body>
+
+</html>

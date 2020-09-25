@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        .container {
+            width: 800px;
+            margin: 30px auto;
+            background-color: #dfdfdf;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #ffffaa;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .menu {
+            background-color: #ffaaaa;
+            width: 240px;
+            height: 200px;
+            float: left;
+        }
+
+        .content {
+            background-color: rgb(161, 228, 255);
+            width: 550px;
+            height: 200px;
+            float: right;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #aaaaff;
+            margin: 10px;
+            float: left;
+        }
+
+        .footer {
+            background-color: rgb(182, 235, 182);
+            height: 80px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="menu">menu</div>
+        <div class="content">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+
+</html>
